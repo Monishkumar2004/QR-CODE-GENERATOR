@@ -10,11 +10,11 @@ def generate_qr():
     file_name = link_name + ".png"
     link = link_entry.get()
     url = pyqrcode.create(link)
-    url.png(file_name, scale=6)
+    url.png(file_name, scale=7)
     image = ImageTk.PhotoImage(Image.open(file_name))
     image_label = Label(image= image)
     image_label.image = image
-    canvas.create_window(250,350, window = image_label)
+    canvas.create_window(250,450, window = image_label)
 
 canvas = Canvas(root, width=500, height=600)
 canvas.pack()
@@ -36,3 +36,4 @@ button = Button(root, text= "Generate", font= ("Courier", 20), fg="red", command
 canvas.create_window(250, 320, window= button)
 
 root.mainloop()
+
