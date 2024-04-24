@@ -2,6 +2,7 @@ from tkinter import *
 from PIL import ImageTk, Image
 import io
 import pyqrcode
+# pip install pypng
 
 root = Tk()
 
